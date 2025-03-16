@@ -1,0 +1,105 @@
+body{
+	background-image: linear-gradient(#fc7290,hsl(332, 67%, 63%),#f5abd5);
+	background-attachment: fixed;
+}
+
+
+#header .nav-link, .navbar-brand {
+    color: white;
+}
+
+.navbar-band {
+    text-shadow: 2px  2px 2px red;
+}
+
+.jumbotron {
+    height: 80vh;
+    border-radius: 0px;
+    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%, 90% 89%, 77% 100%, 63% 88%, 50% 100%, 38% 88%, 24% 100%, 10% 89%);
+
+
+}
+
+#hero .row {
+ justify-content: space-around;
+ align-items: center;
+}
+
+#changetext::after {
+    content:"";
+    animation-name:changetextanim;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changetextanim {
+	25% {
+		content:"BROWNIES";
+		color:rgb(212, 166, 15);
+	}
+	50% {
+		content: "CAKES";
+		color: rgb(64, 31, 117);
+	}
+	75% {
+		content:"DESSERTS & CUPCAKES";
+		color: hsl(244, 87%, 52%); 
+	}
+	100% {
+		content:"BISCUITS,COOKIES & CRACKERS";
+		color: rgb(71, 194, 40);
+	}
+
+}
+
+#loginmodal input, #registermodal input {
+	margin-bottom:20px;
+}
+
+#rating .card, #product .card {
+	border-radius: 20px;
+}
+#rating .card-body{
+	height: 250px;
+}
+#rating .card-footer {
+	background-color: grey;
+	color: white;
+}
+#rating i, #product i {
+	color: orange;
+}
+
+#secname {
+	color: rgb(209, 43, 43);
+}
+#sechead {
+	text-align: center;
+	font-family: lucida;
+	font-size: 50px;
+}
+
+
+#product #addbtn {
+	width:25px;
+	float: right;
+}
+#product #price {
+	font-size:20px;
+	font-weight: bold;
+}
+
+#contact ul{
+	list-style: none;
+}
+#contact li{
+	margin: 10px 0px;
+	font-size: 20px;
+}
+#contact input {
+	margin-bottom: 20px;
+}
+#info .row{
+	text-align: center;
+	size: 2px;
+}

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kashu Shopping website</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body>
+
+	<!-- header section  -->
+	<nav class="navbar navbar-expand-lg bg-danger" id="header">
+		<a class="navbar-brand" href="#"> <i class="bi bi-cart4"></i> Kashu Cake Shop</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#"> About Us <span class="sr-only">(current)</span></a>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Products
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Brownice</a>
+						<a class="dropdown-item" href="#">Breads</a>
+						<a class="dropdown-item" href="#">Biscuits,Cookies & Crackers</a>
+						<a class="dropdown-item" href="#">Cakes</a>
+						<a class="dropdown-item" href="#">Strawberry Specials</a>
+
+                        
+					</div>
+				</li>
+
+                <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Speciality Cakes
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Thobroma Classic Cakes</a>
+					</div>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#"> </i> Find Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"> <i class="bi bi-person-lines-fill"></i> Contact Us</a>
+				</li>
+			</ul>
+			<span class="navbar-text">
+				<button class="btn btn-light btn-sm" data-target="#registermodal" data-toggle="modal"> <i class="bi bi-bag-heart-fill"></i> Order Online</button>
+				<button class="btn btn-light btn-sm" data-target="#loginmodal" data-toggle="modal"> <i class="bi bi-search-heart"></i> Search</button>
+			</span>
+		</div>
+	</nav>
+
+	<!-- hero section  -->
+
+	<div class="jumbotron bg-danger text-light" id="hero">
+		<div class="row">
+			<div>
+				<h1 class="display-3"> Special Discount ! Holi Offer</h1>
+				<h1> Check category - <span id="changetext"></span> </h1>
+
+				<p>
+				<h6> Any celebration, whether a cozy gathering or an extravagent party, is incomplete without cake!</p> 
+					<p>We offer a wide range of handcrafted speciality cakes that are a treat to the eyes and also the taste buds.
+
+				</p>
+				</h6>
+				<button class="btn btn-secondary"> Order Now</button><br>
+				<img src="images/sas.png">
+				
+			</div>
+			<div><img src="images/cake.png" alt="1" class="img-fluid"></div>
+		</div>
+	</div>
+
+	<!-- end hero section  -->
+
+
+
+	<!-- register modal  -->
+	<div class="modal" id="registermodal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2> Order Online </h2>
+				</div>
+				<div class="modal-body">
+					<form>
+						<input type="text" placeholder="fullname" class="form-control">
+						<input type="email" placeholder="email ID" class="form-control">
+						<input type="text" placeholder="Address" class="form-control">
+						<input type="tel" placeholder="contact" class="form-control">
+						<button class="btn btn-success">Submit</button>
+					</form>
+					<p class="mt-2">Already' have an Submit?<a href="#loginmodal" data-dismiss="modal"
+							data-toggle="modal"> RESET</a> </p>
+
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- end of register modal -->
+
+
+	<!-- logic modal  -->
+
+	<div class="modal" id="loginmodal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2> Start typing and hit Enter </h2>
+				</div>
+				<div class="modal-body">
+					<form>
+						<input type="email" placeholder="search" class="form-control">
+						
+						<button class="btn btn-success"><i class="bi bi-house-add-fill"></i></button>
+
+					</form>
+					
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-danger" data-dismiss="modal"> Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<!-- end of login modal  -->
+
+
+
+	<!-- rating section  -->
+	<div class="container" id="rating">
+		<h1 id="sechead"> Our <span id="secname"> Rating </span></h1>
+		<hr width="250px" class="bg-danger">
+		<div class="row m-5 ">
+
+			<div class="col-md-3">
+				<div class="card text-center">
+					<div class="card-body">
+						<img src="images/facebook.png" class="img-fluid">
+					</div>
+
+					<div class="card-footer text-center">
+						<h4> Facebook 4.8 </h4>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-half"></i>
+
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/google.png" class="img-fluid">
+					</div>
+
+					<div class="card-footer text-center">
+						<h4> Google 5 </h4>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/google.png" class="img-fluid">
+					</div>
+
+					<div class="card-footer text-center">
+						<h4>Google 4.8 </h4>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-half"></i>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/inst.png" class="img-fluid">
+					</div>
+
+					<div class="card-footer text-center">
+						<h4> Instagram 5 </h4>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- end of rating section  -->
+
+
+	<!-- product section  -->
+	<div class="container" id="product">
+		<h1 id="sechead"> Our <span id="secname"> Product </span></h1>
+		<hr width="250px" class="bg-danger">
+
+		<div class="row m-5">
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/c1.png" class="img-fluid">
+						<div class="text-center">
+							<h4>Pineapple Cake </h4>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+
+						<div class="mt-3">
+							<span id="price"> price - $500 </span>
+
+							<span> <img src="images/add.png" id="addbtn"> </span>
+						</div>
+
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/c2.png" class="img-fluid">
+						<div class="text-center">
+							<h4> Chocoholic cake</h4>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+
+						<div class="mt-3">
+							<span id="price"> price - $700 </span>
+
+							<span> <img src="images/add.png" id="addbtn"> </span>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/c3.png" class="img-fluid">
+						<div class="text-center">
+							<h4> Hazeinut Cake </h4>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+
+						<div class="mt-3">
+							<span id="price"> price - $800 </span>
+
+							<span> <img src="images/add.png" id="addbtn"> </span>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/c4.png" class="img-fluid">
+						<div class="text-center">
+							<h4> Blueberry cake </h4>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+
+						<div class="mt-3">
+							<span id="price"> price - $300 </span>
+
+							<span> <img src="images/add.png" id="addbtn"> </span>
+						</div>
+
+					</div>
+				</div>
+
+			</div><hr>
+
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/ca1.png" class="img-fluid">
+						<div class="text-center">
+							<h4> Vanilla Cupcake </h4>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+
+						<div class="mt-3">
+							<span id="price"> price - $120 </span>
+
+							<span> <img src="images/add.png" id="addbtn"> </span>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/ca2.png" class="img-fluid">
+						<div class="text-center">
+							<h4> Tiramisu Cup </h4>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+
+						<div class="mt-3">
+							<span id="price"> price - $175 </span>
+
+							<span> <img src="images/add.png" id="addbtn"> </span>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/ca3.png" class="img-fluid">
+						<div class="text-center">
+							<h4> Strawberry Cupcakes </h4>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+
+						<div class="mt-3">
+							<span id="price"> price - $150 </span>
+
+							<span> <img src="images/add.png" id="addbtn"> </span>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-body">
+						<img src="images/ca4.png" class="img-fluid">
+						<div class="text-center">
+							<h4>Chocolate Cupcake  </h4>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+
+						<div class="mt-3">
+							<span id="price"> price - $120 </span>
+
+							<span> <img src="images/add.png" id="addbtn"> </span>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</div>
+		<!-- end of product section  -->
+
+		<!-- about section  -->
+		<div class="container mt-5">
+		<h1 id="sechead"> About <span id="secname"> Us </span></h1>
+		<hr width="250px" class="bg-danger">
+		<div class="row my-5 align-item-center">
+			<div class="col-md-6">
+				<img src="images/about.png" class="img-fluid">
+			</div>
+			<div class="col-md-6 text-justify">
+				<h3> Cakes Shop</h3>
+				<p>Theobroma means 'Food of the Gods' in Greek, befitting our exclusive and indulgent range of offerings that include brownies, cakes, desserts, chocolates, breads, and savouries.</p>
+
+<p>From our humble beginnings in 2004, when the first Theobroma pastry store opened its doors at the iconic Cusrow Baug at Colaba Causeway (Mumbai), we've grown to become a Pan-India chain of patisseries with stores in over 30 cities.</p>
+
+<p>Our mission is to spread happiness by serving smiles on a plate, and this journey continues as we open Theobroma patisseries across the country.</p>		</div>
+
+		</div>
+		</div>
+		<!-- end about section  -->
+
+    	<!-- slick slider  -->
+		<h1 id="sechead"> Our <span id="secname"> Cakes Collection </span></h1>
+		<hr width="250px" class="bg-danger">
+		<div class="slider mb-5 mt-5">
+		<div> <img src="images/b1.png" class="img-fluid"></div>
+		<div> <img src="images/b2.png" class="img-fluid"></div>
+		<div> <img src="images/b3.png" class="img-fluid"></div>
+		<div> <img src="images/b4.png" class="img-fluid"></div>
+		<div> <img src="images/b5.png" class="img-fluid"></div>
+		<div> <img src="images/b6.png" class="img-fluid"></div>
+		<div> <img src="images/b7.png" class="img-fluid"></div>
+		<div> <img src="images/b8.png" class="img-fluid"></div>
+
+	
+
+		</div>
+	 <!-- end of slick slider  -->
+<hr>
+	 <div class="container" id="info">
+		<div class="row my-5">
+			
+		  <div class="col-md-4" id="secname">
+			
+			OUR STORY<br>
+			OUR PRODUCTS<br>
+			SPECIALITY<br> 
+			CAKES<br> 
+			BLOGS<br>
+			CSR<br>
+			HTML SITEMAP<br>
+			<img src="images/sas.png">
+		  </div>
+	
+				<div class="col-md-4">
+					<h5><span id="secname"> <i class="bi bi-person-fill-add"></i> Contact US </span></h5>
+		          <hr width="150px" class="bg-danger">
+					<i class="bi bi-telephone-forward-fill"></i>+91 8182-881881<br>
+              
+					<i class="bi bi-envelope-heart"></i>contact@theobroma.in<br>
+					<hr width="150" class="btn-light">
+
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14906.363405905!2d77.73485585541994!3d20.928774499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a55655500a23%3A0x56ab643e5418d4ad!2sManbhari%20Cakes%20%26%20Food%20Mart!5e0!3m2!1sen!2sin!4v1742125194249!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					
+				</div>
+				<div class="col-md-4">
+				  <h5><span id="secname"> <i class="bi bi-person-fill-add"></i> Sign UP for updates </span></h5>
+		          <hr width="150px" class="bg-danger">
+		           
+		 		  <input type="text" placeholder="full Name" class="form-control"> 
+		  		 <span class="navbar-text">
+			 	 <button class="btn btn-light btn-sm" data-toggle="modal"> <i class="bi bi-person-fill-add"></i> Sign Up</button>
+			 	 </span><br>
+				  OUR STORES - Amaravati | Ahmedabad | Ambala | Anand | Bengaluru | Chandigarh-Mohali | Chennai | Dehradun | Delhi | Faridabad | Ghaziabad | Gurgaon | Hyderabad | Indore | Jaipur | Jalandhar | Kanpur | Karnal | Lucknow | Ludhiana | Meerut | Mumbai | Mysore | Nagpur | Nashik | Navi Mumbai | Noida | Patiala | Prayagraj | Pune | Raipur | Rajkot | Rohtak | Surat | Thane | Vadodara | Varanasi | Vijaywada
+				</div>
+              
+			
+		</div>
+	  </div>
+<hr>
+
+				
+	   <!-- end of contact us section  -->
+
+
+
+
+          
+
+			 
+
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" 
+	integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
+		integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+		integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+		crossorigin="anonymous"></script>
+
+		<script>
+
+    $('.slider').slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplayspeed: 300,
+		responsive: [
+			{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				infinite: true,
+				dots: true
+			}
+			},
+			{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+			},
+			{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+		});
+
+		</script>
+</body>
+
+</html>
